@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whitee"
+    tools:context=".Fragment.OrderFragment">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/ordercoordinator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/relativelayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/whitee"
+                android:elevation="0dp">
+
+                <LinearLayout
+                    android:id="@+id/loctionmenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="6"
+                    app:layout_scrollFlags="scroll|enterAlways">
+
+                    <EditText
+                        android:id="@+id/loction"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="4"
+                        android:background="@drawable/locationborder"
+                        android:drawableLeft="@drawable/ic_gps"
+                        android:drawablePadding="4dp"
+                        android:hint="location "
+
+                        android:inputType="text"
+                        android:padding="6dp"
+                        android:textColor="@color/black"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/qrscanner"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/whitee"
+                        android:cropToPadding="true"
+                        android:padding="10dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_qr"
+
+                        />
+
+                    <ImageView
+                        android:id="@+id/quicksearch"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/whitee"
+                        android:padding="10dp"
+                        android:scaleType="centerCrop"
+
+                        android:src="@drawable/ic_quicksearch" />
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/search"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_below="@+id/loctionmenu"
+                    android:layout_marginHorizontal="10dp"
+                    android:background="@drawable/edit_text_border"
+                    android:drawableLeft="@drawable/ic_search"
+                    android:drawablePadding="4dp"
+                    android:hint="Search for restaurants, uisines"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    app:layout_scrollFlags="noScroll" />
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <HorizontalScrollView
+                android:id="@+id/submenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/appbar"
+                android:fillViewport="true"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:id="@+id/llyout">
+
+                    <TextView
+                        android:id="@+id/food"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:padding="10dp"
+                        android:text="food"
+                        android:textSize="25sp" />
+
+                    <TextView
+                        android:id="@+id/market"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:padding="10dp"
+                        android:text="market"
+                        android:textSize="25sp" />
+
+                    <TextView
+                        android:id="@+id/foodwork"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:padding="10dp"
+                        android:text="food@work"
+                        android:textSize="25sp" />
+
+                    <TextView
+                        android:id="@+id/selfpickup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:padding="10dp"
+                        android:text="self pickup"
+                        android:textSize="25sp" />
+
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@id/submenu"
+                android:id="@+id/subframe"
+                android:layout_marginBottom="56dp"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        </RelativeLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</ScrollView>

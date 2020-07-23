@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<group android:checkableBehavior="single"
+    >
+    <item
+        android:id="@+id/order"
+        android:title="Order"
+        android:icon="@drawable/ic_order"/>
+    <item
+        android:id="@+id/goout"
+        android:title="Go out"
+        android:icon="@drawable/ic_go_out"/>
+    <item
+    android:id="@+id/gold"
+    android:title="Gold"
+    android:icon="@drawable/ic_gold"/>
+    <item
+        android:id="@+id/explore"
+        android:title="Explore"
+        android:icon="@drawable/ic_explore"/>
+    <item
+        android:id="@+id/profile"
+        android:title="Profile"
+        android:icon="@drawable/ic_profile"/>
+
+</group>
+</menu>
